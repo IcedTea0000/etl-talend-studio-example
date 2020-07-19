@@ -11,6 +11,8 @@
   <modules>
     <module>code/routines</module>
     <module>jobs/process/import_data/import_data_0.1</module>
+    <module>jobs/process/extract_csv/customers_0.1</module>
+    <module>jobs/process/extract_csv/extract_cif_0.1</module>
   </modules>
   <properties>
     <talend.project.name>ETL_TALEND_STUDIO_EXAMPLE</talend.project.name>
