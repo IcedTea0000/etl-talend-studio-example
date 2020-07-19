@@ -10,6 +10,7 @@
   <url>http://www.talend.org/</url>
   <modules>
     <module>code/routines</module>
+    <module>jobs/process/import_data/import_data_0.1</module>
   </modules>
   <properties>
     <talend.project.name>ETL_TALEND_STUDIO_EXAMPLE</talend.project.name>

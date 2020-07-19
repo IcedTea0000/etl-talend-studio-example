@@ -5,8 +5,7 @@ CREATE TABLE `olist`.`olist_customers_dataset` (
   `customer_unique_id` VARCHAR(100) NOT NULL,
   `customer_zip_code_prefix` VARCHAR(15) NULL,
   `customer_city` VARCHAR(45) NULL,
-  `customer_state` VARCHAR(45) NULL,
-  PRIMARY KEY (`customer_unique_id`));
+  `customer_state` VARCHAR(45) NULL);
 
 CREATE TABLE `olist`.`olist_orders_dataset` (
   `order_id` VARCHAR(100) NOT NULL,
@@ -17,8 +16,7 @@ CREATE TABLE `olist`.`olist_orders_dataset` (
   `order_approved_at` VARCHAR(100) NULL,
   `order_delivered_carrier_date` VARCHAR(100) NULL,
   `order_delivered_customer_date` VARCHAR(100) NULL,
-  `order_estimated_delivery_date` VARCHAR(100) NULL,
-  PRIMARY KEY (`order_id`));
+  `order_estimated_delivery_date` VARCHAR(100) NULL);
 
 
 CREATE TABLE `olist`.`olist_orders_items_dataset` (
@@ -35,11 +33,10 @@ CREATE TABLE `olist`.`olist_order_reviews_dataset` (
   `review_id` VARCHAR(100) NOT NULL,
   `order_id` VARCHAR(100) NULL,
   `review_score` VARCHAR(100) NULL,
-  `review_comment_title` VARCHAR(100) NULL,
-  `review_comment_message` VARCHAR(100) NULL,
+  `review_comment_title` VARCHAR(300) NULL,
+  `review_comment_message` VARCHAR(1000) NULL,
   `review_creation_date` VARCHAR(100) NULL,
-  `review_answer_timestamp` VARCHAR(100) NULL,
- PRIMARY KEY (`review_id`));
+  `review_answer_timestamp` VARCHAR(100) NULL);
  
  
  CREATE SCHEMA `newmart` ;
