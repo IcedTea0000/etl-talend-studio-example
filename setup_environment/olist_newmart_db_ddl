@@ -9,9 +9,9 @@ CREATE TABLE `olist`.`olist_customers_dataset` (
 
 CREATE TABLE `olist`.`olist_orders_dataset` (
   `order_id` VARCHAR(100) NOT NULL,
+  `customer_id` VARCHAR(100) NULL, 
   `order_status` VARCHAR(45) NULL,
   `order_purchase` VARCHAR(45) NULL,
-  `customer_id` VARCHAR(100) NULL,
   `order_purchase_timestamp` VARCHAR(100) NULL,
   `order_approved_at` VARCHAR(100) NULL,
   `order_delivered_carrier_date` VARCHAR(100) NULL,
@@ -37,6 +37,7 @@ CREATE TABLE `olist`.`olist_order_reviews_dataset` (
   `review_comment_message` VARCHAR(1000) NULL,
   `review_creation_date` VARCHAR(100) NULL,
   `review_answer_timestamp` VARCHAR(100) NULL);
+ 
  
  
  CREATE SCHEMA `newmart` ;
