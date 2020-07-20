@@ -1,9 +1,11 @@
 # **etl-talend-studio-example**
 This is a example of ETL task using Talend Studio, Java, MySQL
 
+---
 ### **Context Description**
 - 2 database **Olist** and **NewMart**. The goal is to detect any update in table **olist.olist_customers_dataset** of customer_number list in NewMart db, extract all information related to the customer_number list from 4 Olist tables, convert information to JSON file output. 
-
+ 
+---
 ### **Result Example** 
 
 - table newmart.cif_client
@@ -42,6 +44,8 @@ This is a example of ETL task using Talend Studio, Java, MySQL
   } ]
 } ]
 ```
+
+---
 ### **Job Flow** 
 - Talend Repository layout
 
