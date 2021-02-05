@@ -1,12 +1,12 @@
 # **etl-talend-studio-example**
-This is a example of ETL task using Talend Studio, Java, MySQL
+This is a example of ETL task for CDC using Talend Studio, Java, MySQL
 
 ---
-### **Context Description**
-- 2 database **Olist** and **NewMart**. The goal is to detect any update in table **olist.olist_customers_dataset** of customer_number list in NewMart db, extract all information related to the customer_number list from 4 Olist tables, convert information to JSON file output. 
+### **Problem Description**
+- 2 schemas **`Olist`** and **`NewMart`**. The goal is to detect any update in table **`olist`.`olist_customers_dataset`** but only extract updates belong to customer_number listed in NewMart db. Output: customer information in JSON format. 
  
 ---
-### **Result Example** 
+### **Expected Result Example** 
 
 - table newmart.cif_client
 
@@ -21,9 +21,9 @@ This is a example of ETL task using Talend Studio, Java, MySQL
 | 060e732b5b29e8181a18229c7b0b2b5e |
 | 290c77bc529b7ac935b93aa66c333dc3 |
 
-- Today **olist.olist_customers_dataset** has 2 update **060e732b5b29e8181a18229c7b0b2b5e, 290c77bc529b7ac935b93aa66c333dc3**
+- Today **`olist`.`olist_customers_dataset`** has 2 updates on id **060e732b5b29e8181a18229c7b0b2b5e, 290c77bc529b7ac935b93aa66c333dc3**
 
-- Talend job will detect these updates and convert information of id **060e732b5b29e8181a18229c7b0b2b5e** to JSON file with new mapping:
+- Talend job will detect these updates and convert information of id **060e732b5b29e8181a18229c7b0b2b5e** to JSON file with new structure:
 ```
 [ {
   "customer_number" : "060e732b5b29e8181a18229c7b0b2b5e",
@@ -46,7 +46,16 @@ This is a example of ETL task using Talend Studio, Java, MySQL
 ```
 
 ---
+### **Environment** 
+
+- Talend Studio v7.3
+- MySQL 8.0
+- Talend Studio custom components: tJSONDoc
+- JDK minimum 1.8.0_161
+
+---
 ### **Job Flow** 
+
 - Talend Repository layout
 
 ![Talend Repository Layout](https://github.com/IcedTea0000/etl-talend-studio-example/blob/master/document_img/repository_layout.JPG)
